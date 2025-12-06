@@ -22,8 +22,7 @@
     "modules-right": [
         "tray",
         "pulseaudio",
-        "network",
-        "custom/power"
+        "network"
     ],
 
     // ========== LEFT MODULES ==========
@@ -91,11 +90,5 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}",
         "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
         "on-click": "nm-connection-editor"
-    },
-
-    "custom/power": {
-        "format": "󰐥",
-        "tooltip": false,
-        "on-click": "logout"
     }
 }
