@@ -1,0 +1,182 @@
+/* Waybar Stylesheet */
+/* Clean, minimal design with soft rounded elements */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar > box {
+    background: rgba(30, 30, 46, 0.92);
+    border: 1px solid rgba(147, 153, 178, 0.15);
+    border-radius: 5px;
+    margin: 0;
+    padding: 4px;
+}
+
+/* Reset all modules */
+#workspaces,
+#submap,
+#window,
+#clock,
+#tray,
+#pulseaudio,
+#network,
+#battery,
+#custom-power {
+    padding: 0 12px;
+    margin: 2px 2px;
+    border-radius: 8px;
+    background: transparent;
+    color: #cdd6f4;
+}
+
+/* ========== WORKSPACES ========== */
+
+#workspaces {
+    padding: 0 0px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 0px 4px;
+    border-radius: 6px;
+    color: #89b4fa;
+    font-weight: 900;
+    background: transparent;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: #cdd6f4;
+    background: rgba(147, 153, 178, 0.1);
+}
+
+#workspaces button.empty {
+    color: #6c7c86;
+    font-weight: 400;
+}
+
+#workspaces button.active {
+    color: #1e1e2e;
+    background: #cba6f7;
+}
+
+#workspaces button.urgent {
+    color: #1e1e2e;
+    background: #f38ba8;
+}
+
+/* ========== SUBMAP ========== */
+
+#submap {
+    color: #f9e2af;
+    background: rgba(249, 226, 175, 0.1);
+}
+
+/* ========== WINDOW ========== */
+
+#window {
+    color: #a6adc8;
+    font-weight: 400;
+}
+
+window#waybar.empty #window {
+    background: transparent;
+    padding: 0;
+}
+
+/* ========== CLOCK ========== */
+
+#clock {
+    color: #cdd6f4;
+}
+
+/* ========== TRAY ========== */
+
+#tray {
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* ========== PULSEAUDIO ========== */
+
+#pulseaudio {
+    color: #89b4fa;
+}
+
+#pulseaudio.muted {
+    color: #6c7086;
+}
+
+/* ========== NETWORK ========== */
+
+#network {
+    color: #94e2d5;
+}
+
+#network.disconnected {
+    color: #6c7086;
+}
+
+/* ========== BATTERY ========== */
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery.charging {
+    color: #f9e2af;
+}
+
+#battery.warning:not(.charging) {
+    color: #fab387;
+}
+
+#battery.critical:not(.charging) {
+    color: #f38ba8;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* ========== POWER ========== */
+
+#custom-power {
+    color: #f38ba8;
+    padding: 0 10px;
+    margin-right: 4px;
+}
+
+#custom-power:hover {
+    background: rgba(243, 139, 168, 0.15);
+}
+
+/* ========== TOOLTIPS ========== */
+
+tooltip {
+    background: rgba(30, 30, 46, 0.95);
+    border: 1px solid rgba(147, 153, 178, 0.2);
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: #cdd6f4;
+    padding: 8px;
+}

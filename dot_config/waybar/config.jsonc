@@ -1,0 +1,101 @@
+// Waybar Configuration
+// Clean, minimal setup for Hyprland
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 0,
+    "margin-top": 4,
+    "margin-left": 5,
+    "margin-right": 5,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/submap",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "network",
+        "custom/power"
+    ],
+
+    // ========== LEFT MODULES ==========
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "persistent-workspaces": {
+          "*": 5
+        },
+        "sort-by-number": true
+    },
+
+    "hyprland/submap": {
+        "format": "  {}",
+        "tooltip": false
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "separate-outputs": true
+    },
+
+    // ========== CENTER MODULES ==========
+
+    "clock": {
+        "format": "{:%a %b %d / %H:%M}",
+        "format-alt": "{:%Y-%m-%d / %H:%M:%S}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "right",
+            "format": {
+                "months": "<span color='#f5c2e7'><b>{}</b></span>",
+                "weeks": "<span color='#94e2d5'>W{}</span>",
+                "weekdays": "<span color='#cba6f7'><b>{}</b></span>",
+                "today": "<span color='#f38ba8'><b>{}</b></span>"
+            }
+        }
+    },
+
+    // ========== RIGHT MODULES ==========
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  muted",
+        "format-icons": {
+            "headphone": "󰋋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "tooltip-format": "{desc}"
+    },
+
+    "network": {
+        "format-wifi": "󰤨  {signalStrength}%",
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󰤭  off",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}",
+        "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": false,
+        "on-click": "logout"
+    }
+}
