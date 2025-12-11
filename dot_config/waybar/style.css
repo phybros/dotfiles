@@ -29,12 +29,15 @@ window#waybar > box {
 #bluetooth,
 #battery,
 #idle_inhibitor,
-#custom-power {
-    padding: 0 5px;
-    margin: 0px 2px;
+#custom-arch {
     border-radius: 6px;
     background: transparent;
     color: #cdd6f4;
+    padding: 0 13px 0 10px;
+}
+
+#custom-arch {
+  padding-right: 4px;
 }
 
 /* ========== WORKSPACES ========== */

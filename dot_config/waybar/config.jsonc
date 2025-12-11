@@ -4,7 +4,7 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "spacing": 0,
+    "spacing": 2,
     "margin-top": 4,
     "margin-left": 5,
     "margin-right": 5,
@@ -16,6 +16,7 @@
     ],
 
     "modules-center": [
+        "custom/arch",
         "clock"
     ],
 
@@ -26,6 +27,10 @@
         "pulseaudio",
         "network"
     ],
+
+    "custom/arch": {
+      "format": "<span size='large' color='#89b4fa'>󰣇</span>"
+    },
 
     // ========== LEFT MODULES ==========
 
@@ -107,12 +112,11 @@
     "bluetooth": {
         "format": "<span size='large'></span>",
         "on-click": "hyprctl dispatch exec [float] 'ghostty --command=bluetui'",
-        "format-connected": " {device_alias}",
-        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+        "format-connected": "<span size='large'></span> {device_alias}",
+        "format-connected-battery": "<span size='large'></span> {num_connections}",
+        "tooltip-format": "{num_connections} connected",
+        "tooltip-format-connected": "{num_connections} devices connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_battery_percentage}%\t{device_alias}"
     }
 }
