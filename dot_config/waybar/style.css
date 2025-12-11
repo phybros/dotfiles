@@ -26,11 +26,13 @@ window#waybar > box {
 #tray,
 #pulseaudio,
 #network,
+#bluetooth,
 #battery,
+#idle_inhibitor,
 #custom-power {
-    padding: 0 12px;
-    margin: 2px 2px;
-    border-radius: 8px;
+    padding: 0 5px;
+    margin: 0px 2px;
+    border-radius: 6px;
     background: transparent;
     color: #cdd6f4;
 }
@@ -131,6 +133,14 @@ window#waybar.empty #window {
     color: #6c7086;
 }
 
+#bluetooth {
+    color: #04a5e5;
+}
+
+#idle_inhibitor.deactivated {
+    color: #666;
+}
+
 /* ========== BATTERY ========== */
 
 #battery {
@@ -154,18 +164,6 @@ window#waybar.empty #window {
     0% { opacity: 1; }
     50% { opacity: 0.6; }
     100% { opacity: 1; }
-}
-
-/* ========== POWER ========== */
-
-#custom-power {
-    color: #f38ba8;
-    padding: 0 10px;
-    margin-right: 4px;
-}
-
-#custom-power:hover {
-    background: rgba(243, 139, 168, 0.15);
 }
 
 /* ========== TOOLTIPS ========== */

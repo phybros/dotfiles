@@ -21,8 +21,9 @@
 
     "modules-right": [
         "tray",
-        "pulseaudio",
         "idle_inhibitor",
+        "bluetooth",
+        "pulseaudio",
         "network"
     ],
 
@@ -32,7 +33,7 @@
         "format": "{id}",
         "on-click": "activate",
         "persistent-workspaces": {
-          "*": 5
+          "*": 4
         },
         "sort-by-number": true
     },
@@ -74,8 +75,8 @@
     },
 
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-muted": "󰝟  muted",
+        "format": "<span size='large'>{icon}</span> {volume}%",
+        "format-muted": "<span size='large'>󰝟</span> muted",
         "format-icons": {
             "headphone": "󰋋",
             "default": ["󰕿", "󰖀", "󰕾"]
@@ -87,17 +88,31 @@
     "idle_inhibitor": {
       "format": "{icon}",
       "format-icons": {
-          "activated": "☕",
-          "deactivated": "🔒"
-      }
+          "activated": "<span size='large'>󱩜</span>",
+          "deactivated": "<span size='large'>󰐂</span>"
+      },
+      "tooltip-format-activated": "Sleeping is Inhibited",
+      "tooltip-format-deactivated": "Sleeping is Allowed"
     },
 
     "network": {
         "format-wifi": "󰤨  {signalStrength}%",
-        "format-ethernet": "󰈀 ",
+        "format-ethernet": "<span size='large'>󰈀</span>",
         "format-disconnected": "󰤭  off",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}",
         "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
         "on-click": "nm-connection-editor"
+    },
+
+    "bluetooth": {
+        "format": "<span size='large'></span>",
+        "on-click": "hyprctl dispatch exec [float] 'ghostty --command=bluetui'",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
     }
 }
