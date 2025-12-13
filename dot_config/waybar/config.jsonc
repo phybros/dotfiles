@@ -29,7 +29,8 @@
     ],
 
     "custom/arch": {
-      "format": "<span size='large' color='#89b4fa'>󰣇</span>"
+      "format": "<span size='large' color='#89b4fa'>󰣇</span>",
+      "tooltip-format": "󰣇 i use arch, btw"
     },
 
     // ========== LEFT MODULES ==========
@@ -110,10 +111,8 @@
     },
 
     "bluetooth": {
-        "format": "<span size='large'></span>",
+        "format": "<span size='large'></span> {num_connections}",
         "on-click": "hyprctl dispatch exec [float] 'ghostty --command=bluetui'",
-        "format-connected": "<span size='large'></span> {device_alias}",
-        "format-connected-battery": "<span size='large'></span> {num_connections}",
         "tooltip-format": "{num_connections} connected",
         "tooltip-format-connected": "{num_connections} devices connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
