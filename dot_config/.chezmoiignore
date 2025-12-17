@@ -1,5 +1,0 @@
-{{- if ne .chezmoi.os "linux" }}
-hypr/
-packages.txt
-waybar/
-{{- end }}

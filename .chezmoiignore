@@ -1,0 +1,7 @@
+{{- if ne .chezmoi.os "linux" }}
+.config/hypr/
+.config/packages.txt
+.config/waybar/
+setup-nvidia.sh
+{{- end }}
+
