@@ -1,5 +1,22 @@
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 autoload -Uz compinit
-compinit
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
+
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[3~" delete-char
 
 export EDITOR=nvim
 
@@ -10,6 +27,8 @@ alias k=kubectl
 alias more=bat
 alias cat=bat
 alias du=dust
+
+eval "$(zoxide init zsh --cmd cd)"
 
 {{- if eq .chezmoi.hostname "ankh" "nebula" }}
 # jenv things
@@ -29,7 +48,8 @@ export PATH="$PATH:/Users/will/.lmstudio/bin"
 # End of LM Studio CLI section
 {{- end }}
 
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # go prompt go
 eval "$(starship init zsh)"
