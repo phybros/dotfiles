@@ -1,0 +1,36 @@
+autoload -Uz compinit
+compinit
+
+export EDITOR=nvim
+
+# aliases
+alias ls=eza
+alias kubectl=kubecolor
+alias k=kubectl
+alias more=bat
+alias cat=bat
+alias du=dust
+
+{{- if eq .chezmoi.hostname "ankh" "nebula" }}
+# jenv things
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# kube things
+# Load the kubectl completion code for zsh[1] into the current shell
+source <(kubectl completion zsh)
+compdef k=kubectl
+compdef kubecolor=kubectl
+
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/will/.lmstudio/bin"
+# End of LM Studio CLI section
+{{- end }}
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# go prompt go
+eval "$(starship init zsh)"
+
