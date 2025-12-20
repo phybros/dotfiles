@@ -41,15 +41,13 @@ source <(kubectl completion zsh)
 compdef k=kubectl
 compdef kubecolor=kubectl
 
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/will/.lmstudio/bin"
 # End of LM Studio CLI section
 {{- end }}
-
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # go prompt go
 eval "$(starship init zsh)"
