@@ -47,6 +47,9 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/will/.lmstudio/bin"
 # End of LM Studio CLI section
+
+# ssh-agent on ankh
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 {{- end }}
 
 # go prompt go
