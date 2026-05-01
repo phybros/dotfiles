@@ -22,7 +22,7 @@ read_only = ' '
 
 [git_status]
 disabled = false
-format = '([$all_status]($style) )'
+format = '([$all_status$ahead_behind]($style) )'
 
 [character]
 disabled = false
