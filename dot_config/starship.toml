@@ -38,19 +38,6 @@ truncation_length = 2
 fish_style_pwd_dir_length = 1
 format = "[$path]($style)[$read_only]($read_only_style)"
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"code" = "󰲋 "
-
-[time]
-disabled = false
-time_format = "%R"
-style = "bg:lavender fg:sapphire"
-format = '[[  $time ](fg:crust bg:lavender)]($style)'
-
 [character]
 disabled = false
 success_symbol = '[>](bold fg:green)'
