@@ -17,8 +17,7 @@
 # $character"""
 
 format = """
-$directory $character
-"""
+$directory $character"""
 
 palette = 'catppuccin_mocha'
 
