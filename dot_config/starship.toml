@@ -3,7 +3,7 @@
 add_newline = false
 
 format = """
-$directory $character"""
+$directory $git_status$character"""
 
 palette = 'catppuccin_mocha'
 
@@ -19,6 +19,9 @@ truncate_to_repo = true
 fish_style_pwd_dir_length = 1
 format = "[$path]($style)[$read_only]($read_only_style)"
 read_only = ' '
+
+[git_status]
+disabled = false
 
 [character]
 disabled = false
