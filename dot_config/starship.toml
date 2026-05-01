@@ -2,10 +2,13 @@
 
 add_newline = false
 
-format = """
-$directory $git_status$character"""
+right_format = "$time"
+format = "$directory $git_status$character"
 
 palette = 'catppuccin_mocha'
+
+[time]
+disabled = false
 
 [username]
 show_always = true
