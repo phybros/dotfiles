@@ -22,31 +22,6 @@ $directory $character
 
 palette = 'catppuccin_mocha'
 
-[os]
-disabled = false
-style = "bg:red fg:crust"
-
-[os.symbols]
-Windows = ""
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = "󰀵"
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
-
 [username]
 show_always = true
 style_user = "bg:red fg:crust"
@@ -60,9 +35,9 @@ format = '[ $user ]($style)'
 # truncation_symbol = "…/"
 
 [directory]
-truncation_length = 1
+truncation_length = 3
 fish_style_pwd_dir_length = 1
-truncate_to_repo = false
+format = "[$path]($style)[$read_only]($read_only_style)"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
