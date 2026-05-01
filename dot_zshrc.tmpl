@@ -45,7 +45,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/will/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 
 # ssh-agent on ankh
@@ -53,8 +53,8 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 {{- end }}
 
 # go prompt go
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # mise
-eval "$(mise activate zsh --shims)"
+eval "$(mise activate zsh)"
 
