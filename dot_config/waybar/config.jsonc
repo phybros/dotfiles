@@ -39,7 +39,7 @@
         "format": "{id}",
         "on-click": "activate",
         "persistent-workspaces": {
-          "*": 4
+          "*": 6
         },
         "sort-by-number": true
     },

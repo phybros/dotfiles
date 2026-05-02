@@ -35,6 +35,9 @@ eval "$(zoxide init zsh --cmd cd)"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+# go things
+export PATH="$HOME/go/bin:$PATH"
+
 # kube things
 # Load the kubectl completion code for zsh[1] into the current shell
 source <(kubectl completion zsh)
