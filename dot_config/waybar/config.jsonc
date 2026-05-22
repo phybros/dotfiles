@@ -112,7 +112,7 @@
 
     "bluetooth": {
         "format": "<span size='large'></span> {num_connections}",
-        "on-click": "hyprctl dispatch exec [float] 'ghostty --command=bluetui'",
+        "on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"ghostty --command=bluetui\", { float = true })'",
         "tooltip-format": "{num_connections} connected",
         "tooltip-format-connected": "{num_connections} devices connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
