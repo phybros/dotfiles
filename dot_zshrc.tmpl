@@ -57,6 +57,10 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 {{- end }}
 
+{{- if eq .chezmoi.hostname "nebula" }}
+export PATH="/Applications/Blender.app/Contents/MacOS:$PATH"
+{{- end }}
+
 # go prompt go
 eval "$(starship init zsh)"
 
