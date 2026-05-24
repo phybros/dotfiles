@@ -32,7 +32,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("swaync")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd(terminal)
-	hl.exec_cmd("flameshot")
 end)
 
 -------------------------------
@@ -181,6 +180,7 @@ hl.config({
 
 local mainMod = "SUPER"
 
+hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))

@@ -22,6 +22,7 @@
 
     "modules-right": [
         "tray",
+	"custom/screenshot",
         "idle_inhibitor",
         "bluetooth",
         "pulseaudio",
@@ -78,6 +79,14 @@
     "tray": {
         "icon-size": 16,
         "spacing": 8
+    },
+
+    "custom/screenshot": {
+      "format": "󰹑",
+      "tooltip": true,
+      "tooltip-format": "Screenshot full screen (right click to select area)",
+      "on-click": "grim - | swappy -f -",
+      "on-click-right": "grim -g \"$(slurp)\" - | swappy -f -"
     },
 
     "pulseaudio": {
