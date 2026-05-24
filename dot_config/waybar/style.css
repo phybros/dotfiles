@@ -29,6 +29,7 @@ window#waybar > box {
 #bluetooth,
 #battery,
 #idle_inhibitor,
+#custom-screenshot,
 #custom-arch {
     border-radius: 6px;
     background: transparent;

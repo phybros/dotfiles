@@ -82,11 +82,12 @@
     },
 
     "custom/screenshot": {
-      "format": "󰹑",
+      "format": "<span size='large'>󰹑</span>",
       "tooltip": true,
-      "tooltip-format": "Screenshot full screen (right click to select area)",
-      "on-click": "grim - | swappy -f -",
-      "on-click-right": "grim -g \"$(slurp)\" - | swappy -f -"
+      "tooltip-format": "Screenshot\n\nLeft Click: fullscreen silent\nRight Click: fullscreen edit\nMiddle Click: area edit",
+      "on-click-right": "grim - | swappy -f -",
+      "on-click-middle": "grim -g \"$(slurp)\" - | swappy -f -",
+      "on-click": "mkdir -p ~/Pictures/Screenshots && grim ~/Pictures/Screenshots/Screenshot-$(date +%Y-%m-%d_%H%M%S).png"
     },
 
     "pulseaudio": {
