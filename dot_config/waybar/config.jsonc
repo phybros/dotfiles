@@ -97,7 +97,7 @@
             "headphone": "󰋋",
             "default": ["󰕿", "󰖀", "󰕾"]
         },
-        "on-click": "pavucontrol",
+        "on-click": "pulsemixer",
         "tooltip-format": "{desc}"
     },
 
