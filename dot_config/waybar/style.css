@@ -106,7 +106,7 @@ window#waybar.empty #window {
 /* ========== TRAY ========== */
 
 #tray {
-    padding: 0 8px;
+    padding: 0;
 }
 
 #tray > .passive {
