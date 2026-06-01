@@ -34,7 +34,7 @@ window#waybar > box {
     border-radius: 6px;
     background: transparent;
     color: #cdd6f4;
-    padding: 0 6px 0 6px;
+    padding: 0 10px 0 10px;
 }
 
 #custom-arch {
