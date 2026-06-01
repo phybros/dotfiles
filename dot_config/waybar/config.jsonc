@@ -97,7 +97,7 @@
             "headphone": "󰋋",
             "default": ["󰕿", "󰖀", "󰕾"]
         },
-        "on-click": "pulsemixer",
+        "on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"ghostty --command=pulsemixer\", { float = true })'",
         "tooltip-format": "{desc}"
     },
 
