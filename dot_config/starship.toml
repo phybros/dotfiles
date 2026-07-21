@@ -8,6 +8,7 @@ format = "$hostname$directory$git_status$character"
 [hostname]
 ssh_only = true
 disabled = false
+format = "on $hostname "
 
 [time]
 disabled = false
