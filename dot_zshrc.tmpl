@@ -53,8 +53,9 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 {{- end }}
 
 {{- if eq .chezmoi.hostname "ankh" }}
-# ssh-agent on ankh
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
 {{- end }}
 
 {{- if eq .chezmoi.hostname "nebula" }}
