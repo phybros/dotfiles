@@ -1,0 +1,56 @@
+
+general {
+    colors = true
+    interval = 2
+    markup = "pango"
+
+    color_good = "#a6e3a1"
+    color_degraded = "#f9e2af"
+    color_bad = "#f38ba8"
+}
+
+order += "ethernet _first_"
+order += "disk /"
+order += "load"
+order += "memory"
+order += "tztime local"
+order += "volume master"
+
+volume master {
+    format = "<span foreground='#89dceb'>%volume</span>"
+    format_muted = "muted"
+    device = "pulse"
+}
+
+wireless _first_ {
+    format_up = "<span foreground='#89b4fa'>W: (%quality at %essid) %ip</span>"
+    format_down = "W: down"
+}
+
+ethernet _first_ {
+    format_up = "<span foreground='#89b4fa'>%ip</span>"
+    format_down = "E: down"
+}
+
+battery all {
+    format = "%status %percentage %remaining"
+}
+
+disk "/" {
+    format = "<span foreground='#a6e3a1'>%avail</span>"
+}
+
+load {
+    format = "<span foreground='#f9e2af'>%1min</span>"
+}
+
+memory {
+    format = "<span foreground='#cba6f7'>%used</span> / <span foreground='#f5c2e7'>%available</span>"
+    threshold_degraded = "2G"
+    format_degraded = "MEMORY &lt; %available"
+}
+
+tztime local {
+    format = "%Y-%m-%d %H:%M:%S"
+}
+
