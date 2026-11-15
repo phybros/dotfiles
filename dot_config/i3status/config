@@ -1,7 +1,7 @@
 
 general {
     colors = true
-    interval = 2
+    interval = 3
     markup = "pango"
 
     color_good = "#a6e3a1"
@@ -51,6 +51,6 @@ memory {
 }
 
 tztime local {
-    format = "%Y-%m-%d %H:%M:%S"
+    format = "%Y-%m-%d %H:%M"
 }
 
