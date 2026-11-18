@@ -18,6 +18,9 @@ set $term ghostty
 # Your preferred application launcher
 # set $menu rofi -show drun -modes drun
 set $menu j4-dmenu-desktop -I
+set $browser google-chrome-stable
+
+font pango:JetBrains Mono Nerd Font 9
 
 ### Output configuration
 #
@@ -67,12 +70,13 @@ output * bg #008080 solid_color
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+b exec $browser
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -143,8 +147,8 @@ output * bg #008080 solid_color
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    # bindsym $mod+b splith
+    # bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
@@ -155,10 +159,7 @@ output * bg #008080 solid_color
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
-
-    # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+Shift+v floating toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent

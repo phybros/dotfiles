@@ -50,8 +50,8 @@ hl.env("XDG_SESSION_TYPE", "wayland")
 
 hl.config({
 	general = {
-		gaps_in = 2,
-		gaps_out = 5,
+		gaps_in = 0,
+		gaps_out = 0,
 		border_size = 1,
 		col = {
 			active_border = { colors = { "rgba(0279a1ff)", "rgba(01516bff)" }, angle = 45 },
@@ -67,8 +67,8 @@ hl.config({
 		layout = "dwindle",
 	},
 	decoration = {
-		rounding = 5,
-		rounding_power = 2,
+		rounding = 0,
+		rounding_power = 1,
 
 		-- Change transparency of focused and unfocused windows
 		active_opacity = 1.0,
